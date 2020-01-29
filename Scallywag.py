@@ -29,6 +29,8 @@ def get_args():
     return parser.parse_args()
 
 if __name__ == "__main__":
+    urllib3.disable_warnings()
+    
     args = get_args()
     keyword = args.keyword.lower()
     pages = int(args.pages)
